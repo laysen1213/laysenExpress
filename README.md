@@ -3,7 +3,7 @@
 
 初学node，简单的用express做了一个自己的博客
 
-博客地址：<a href="http://express.91laysen.cn/" target="_blank">http://express.91laysen.cn/</a>
+博客地址：http://express.91laysen.cn/
 
 
 ## 技术栈
