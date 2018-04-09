@@ -1,6 +1,5 @@
 # 前言
 
-[README in English](README-en.md)
 
 初学node，简单的用express做了一个自己的博客
 
