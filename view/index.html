@@ -1,0 +1,65 @@
+{% include "header.html" %}
+<div class="banner_slide">
+	<ul>
+		<li style="background-image: url(/public/images/3.jpg?v=1.1);"></li>
+		<li style="background-image: url(/public/images/2.jpg?v=1.1);"></li>
+		<li style="background-image: url(/public/images/1.jpg?v=1.1);"></li>
+	</ul>
+	<a href="javascript:;" class="banner_flex banner_flex_prev"></a>
+	<a href="javascript:;" class="banner_flex banner_flex_next"></a>
+	<div class="banner_active"></div>
+</div>
+<main id="main">
+	<section class="section2">
+		<h2 class="section_h2">已经有许多的爱好者入驻了我的网站······</h2>
+		<p class="section_p">
+		在这里，发现基于共同兴趣的同好；鼓励原创和分享精神；除了牛逼的技能，我们更在意背后价值观的认同。
+		</p>
+		<div class="section2_list">
+			<ul>
+				{% for v in list %}
+				<li>
+					<a href="/detail?id={{v.id}}" class="section_img_a" style="background-image: url({{h+v.cover}});" data-image="{{h+v.cover}}">
+						<div class="section2_info">
+							<div class="section2_gh">{{v.intro}}</div>
+						</div>
+					</a>
+					<h5><a href="/detail?id={{v.id}}">{{v.title}}</a></h5>
+					<div class="section2_dean">
+						<div class="section2_fl fl">{{v.ctime}}</div>
+						<div class="section2_fr fr">{{v.name}}</div>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+	<section class="section1">
+		<h2 class="section_h2">【匆匆那年】</h2>
+		<p class="section_p">
+			是岁月宽容恩赐反悔的时间
+		</p>
+		<ul class="section1_ul">
+			<li><a href="javascript:;"><img src="/public/images/qh1.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh2.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh3.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh4.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh5.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh6.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh7.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh8.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh9.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh10.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh11.jpg" alt=""></a></li>
+			<li><a href="javascript:;"><img src="/public/images/qh12.jpg" alt=""></a></li>
+			<div class="section1_box"></div>
+		</ul>
+	</section>
+</main>
+{% include "footer.html" %}
+
+<script type="text/javascript">
+$(function(){
+	$(".banner_slide").banner();
+})
+</script>

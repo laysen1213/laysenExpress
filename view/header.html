@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1" />
+	<link rel="stylesheet" href="/public/css/laysen.css">
+	<link rel="stylesheet" href="/public/css/style.css?v=1.1">
+</head>
+<body>
+<header id="header">
+	<div class="header_content">
+		<h2>
+			<a href="/" title="">
+				<img src="/public/images/logo.png?v=1" alt="" >
+			</a>
+		</h2>
+		<nav id="nav">
+			<a href="/" class="{% if nav == 1%}on{% endif %}">首页</a>
+			<a href="/blog" class="{% if nav == 2%}on{% endif %}">博客</a>
+			<!-- <a href="<?=U('index/music')?>" class="<?php if($nav == 3){ ?>on<?php } ?>">音乐</a> -->
+			<div class="nav_line"></div>
+		</nav>
+		<div class="header_search">
+			<form action="/blog">
+				<input type="text" name="search" placeholder="搜索" id="search_input" value="{{search}}">
+				<img src="/public/images/search.png" >
+				<input type="submit" id="search_submit" >
+			</form>
+		</div>
+	</div>
+</header>

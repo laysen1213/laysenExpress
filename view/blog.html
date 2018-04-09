@@ -1,0 +1,57 @@
+{% include "header.html" %}
+<main class="main_list">
+	<div class="list_left">
+		<div class="list_left_top">
+			<div class="list_left_tj">
+				<span>最新动态：</span>
+				<a href="">做最好的自己</a>
+			</div>
+			<div class="list_left_tjPage">
+				<a href="javascript:;" class="prev"></a>
+				<a href="javascript:;" class="next"></a>
+			</div>
+		</div>
+		<div class="list_left_nav">
+			<h3 class="fl">HOT/最新</h3>
+			<!-- <div class="list_left_navLt fr">
+				<a href="" class="on">热门</a>
+				<a href="">人物</a>
+				<a href="">技术分析</a>
+			</div> -->
+		</div>
+		<div class="list_left_main">
+			<ul>
+				{% for v in list %}
+				<li>
+					<a href="/detail?id={{v.id}}">
+						<img src="{{h+v.cover}}" alt="">
+					</a>
+					<div class="list_left_mF">
+						<h3>
+							<a href="/detail?id={{v.id}}" title="{{v.title}}">{{v.title}}</a>
+						</h3>
+						<div class="list_left_mC">{{v.intro}}</div>
+						<div class="list_left_mA">
+							<span>{{v.ctime}}</span>
+							<div class="list_left_mlook">[{{v.name}}]</div>
+						</div>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="list_right">
+		<h3>推荐阅读</h3>
+		<ul class="list_right_ul">
+			{% for v in tj %}
+			<li>
+				<i></i>
+				<a href="/detail?id={{v.id}}" title="{{v.title}}">{{v.title}}</a>
+				<p>{{v.ctime}}</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</main>
+{% include "footer.html" %}

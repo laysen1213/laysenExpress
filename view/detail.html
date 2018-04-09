@@ -1,0 +1,30 @@
+{% include "header.html" %}
+<main class="main_list">
+	<div class="list_left">
+		<div class="info_left">
+			<h2 class="info_title">{{info.title}}</h2>
+			<div class="list_left_mA">
+				<span>{{info.name}}</span>
+				<span>&nbsp;&nbsp;|&nbsp;&nbsp;{{info.ctime}}</span>
+			</div>
+			<div class="info_content" style="display: none;">{{info.content|striptags}}</div>
+		</div>
+	</div>
+	<div class="list_right">
+		<h3>推荐阅读</h3>
+		<ul class="list_right_ul">
+			{% for v in tj %}
+			<li>
+				<i></i>
+				<a href="/detail?id={{v.id}}" title="{{v.title}}">{{v.title}}</a>
+				<p>{{v.ctime}}</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</main>
+{% include "footer.html" %}
+
+<script type="text/javascript">
+$(".info_content").html($(".info_content").text()).show()
+</script>
