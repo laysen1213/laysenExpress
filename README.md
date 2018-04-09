@@ -42,7 +42,7 @@ node app.js
 
 ### 首页展示
 
-
+<img src="http://express.91laysen.cn/public/20180409220644.jpg"/>
 
 
 
