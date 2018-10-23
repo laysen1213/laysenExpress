@@ -3,8 +3,8 @@ var prefix = 'pt_';
 var mysql = require('mysql');
 var connection = mysql.createConnection({
 	host     : 'localhost',
-	user     : 'root',
-	password : 'ngwse9d2FH12412fsFd',
+	user     : 'project',
+	password : '8B5665784254D8AF2F18E314C4CEAA05',
 	database : 'laysen'
 });
 
