@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
         for(var i in rs){
             rs[i].ctime = timetrans(rs[i].ctime);
         }
+        console.log(rs)
         res.render('index',{
             list : rs,
             h: h,
